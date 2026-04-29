@@ -1,0 +1,209 @@
+ticker,sentiment_score,sentiment_label,price_date,close_price,next_day_close,next_day_pct_change,title,source
+AAPL,0.23911663216011042,positive,2026-03-31,253.79,255.63,0.725,"Warren Buffett says he sold Apple too soon and would buy more of it, though not in this market",Market Insider
+AAPL,0.012936179981634523,neutral,2026-04-28,270.71,270.17,-0.1995,PayPal's new CEO makes Venmo a standalone business unit as potential buyers circle,US Top News and Analysis
+AAPL,0.1263888888888889,positive,2026-04-28,270.71,270.17,-0.1995,"Nvidia Could Generate More Cash Than Apple, Microsoft Combined — BofA Says It's Time To Pay Shareholders",Yahoo! Finance: AAPL News
+AAPL,-0.04375,neutral,2026-04-28,270.71,270.17,-0.1995,Apple Earnings Put Ternus in Focus,Yahoo! Finance: AAPL News
+AAPL,0.09169206643696438,neutral,2026-04-28,270.71,270.17,-0.1995,AAPL's Services Growth Rides on Strong Content & Games: What's Ahead?,Yahoo! Finance: AAPL News
+AAPL,0.13119318181818182,positive,2026-04-28,270.71,270.17,-0.1995,Apple's Q2 Earnings: Strong iPhone 17 Shipment to Aid Top-Line Growth,Yahoo! Finance: AAPL News
+AAPL,0.08652219873150103,neutral,2026-04-28,270.71,270.17,-0.1995,Ramsey Theory Group CEO Dan Herbatschek Warns Wall Street’s AI Boom Faces an ROI Reckoning as Big Tech Earnings Week Begins,Yahoo! Finance: SHOP News
+AAPL,0.13268706226023302,positive,2026-04-28,270.71,270.17,-0.1995,Will Apple Report Blowout Q2 Results as it Navigates a CEO Succession Plan?,Yahoo! Finance: AAPL News
+AAPL,0.055730625583566756,neutral,2026-04-28,270.71,270.17,-0.1995,"Apple to report Q2 earnings, first since announcing Ternus as Cook's replacement",Yahoo! Finance: AAPL News
+AAPL,0.10436507936507937,positive,2026-04-28,270.71,270.17,-0.1995,Apple loses bid to pause App Store fee changes as case heads to Supreme Court,Yahoo! Finance: AAPL News
+AMD,0.0989038342609771,neutral,2026-04-28,323.21,337.11,4.3006,"This Super Semiconductor Stock Is Obliterating Nvidia, AMD, and Broadcom in 2026",Yahoo! Finance: AAPL News
+AMD,0.18176020408163265,positive,2026-04-28,323.21,337.11,4.3006,Advanced Micro Devices (AMD): Among the Best Fundamental Stocks to Invest In According to Billionaires,Yahoo! Finance: AMD News
+AMD,0.044444444444444446,neutral,2026-04-28,323.21,337.11,4.3006,Susquehanna Raises AMD Price Target to $375: Can the Server CPU Story Keep Powering the Stock?,Yahoo! Finance: AMD News
+AMD,0.1433862433862434,positive,2026-04-28,323.21,337.11,4.3006,"Stock Market Today, April 29: Advanced Micro Devices Rises After Analyst Upgrade Points to Data Center GPU Demand Ahead of Earnings",Yahoo! Finance: NVDA News
+AMD,-0.10158730158730159,negative,2026-04-28,323.21,337.11,4.3006,"Nvidia, AMD Slip. Why Chip Stocks Are on Edge Ahead of Big Tech Earnings.",Yahoo! Finance: AMD News
+AMD,0.10041152263374487,positive,2026-04-28,323.21,337.11,4.3006,AMD moves higher as AI growth expectations build,Yahoo! Finance: AMD News
+AMD,0.09346092503987238,neutral,2026-04-28,323.21,337.11,4.3006,AMD Stock Rises After Analyst Hikes Price Target Ahead of Earnings,Yahoo! Finance: AMD News
+AMD,-0.006666666666666662,neutral,2026-04-28,323.21,337.11,4.3006,AMD Rises as Susquehanna Lifts Price Target,Yahoo! Finance: AMD News
+AMZN,0.07562992562992563,neutral,2026-04-24,263.99,261.12,-1.0872,"Amazon, Meta, Microsoft, Salesforce, and Stripe Join the Universal Commerce Protocol Tech Council",Yahoo! Finance: SHOP News
+AMZN,0.2651041666666667,positive,2026-04-24,263.99,261.12,-1.0872,Microsoft (MSFT) Must Face a UK lawsuit Over Cloud Computing Licenses,Yahoo! Finance: BABA News
+AMZN,0.12645427489177488,positive,2026-04-27,261.12,259.7,-0.5438,Smart Sellers Academy Launches Multi‑Channel Expansion to Power the Next Generation of Digital Brands,Yahoo! Finance: SHOP News
+AMZN,0.11153846153846153,positive,2026-04-28,259.7,263.04,1.2861,Cathie Wood Loads Up $74 Million into Amazon Stock,Yahoo! Finance: AMZN News
+AMZN,0.08652219873150103,neutral,2026-04-28,259.7,263.04,1.2861,Ramsey Theory Group CEO Dan Herbatschek Warns Wall Street’s AI Boom Faces an ROI Reckoning as Big Tech Earnings Week Begins,Yahoo! Finance: SHOP News
+AMZN,-0.26666666666666666,negative,2026-04-28,259.7,263.04,1.2861,"Amazon Beats Q1 Expectations, Reports Strong Cloud Growth. But Stock Slides.",Yahoo! Finance: AMZN News
+AMZN,0.10738747048406137,positive,2026-04-28,259.7,263.04,1.2861,Copyright Lawsuit Tests Avatar’s Role In Disney’s Broader Investment Story,Yahoo! Finance: DIS News
+AMZN,0.06962366007008865,neutral,2026-04-28,259.7,263.04,1.2861,OpenAI looms over earnings from tech hyperscalers,Earnings
+AMZN,0.12971400184514942,positive,2026-04-28,259.7,263.04,1.2861,Amazon.com Announces First Quarter Results,Yahoo! Finance: AMZN News
+AMZN,0.08282312925170067,neutral,2026-04-28,259.7,263.04,1.2861,"Amazon's cloud unit reports 28% sales growth, topping estimates",US Top News and Analysis
+AMZN,-0.08333333333333333,neutral,2026-04-28,259.7,263.04,1.2861,Amazon Earnings Beat Estimates. A Weak Spot May Still Be Weighing on the Stock.,Yahoo! Finance: MSFT News
+AMZN,0.03780869923727067,neutral,2026-04-28,259.7,263.04,1.2861,Amazon (AMZN) Secures Major AWS Deal With Meta,Yahoo! Finance: AMZN News
+AMZN,-0.5,negative,2026-04-28,259.7,263.04,1.2861,"Amazon reports an increase in profits and sales for 1Q, fueled by cloud computing unit",Yahoo! Finance: AMZN News
+AMZN,0.25333333333333335,positive,2026-04-28,259.7,263.04,1.2861,Amazon Q1 2026 earnings beat as AWS growth hits 15-quarter high,Yahoo! Finance: AMZN News
+AMZN,0.23198529411764707,positive,2026-04-28,259.7,263.04,1.2861,"All eyes on Big Tech: Meta, Alphabet, Microsoft, Amazon report earnings",Yahoo! Finance: AAPL News
+AMZN,0.05765306122448979,neutral,2026-04-28,259.7,263.04,1.2861,Amazon (AMZN) Q1 Earnings Lag Estimates,Yahoo! Finance: AMZN News
+AMZN,0.16126769626769627,positive,2026-04-28,259.7,263.04,1.2861,Amazon’s (NASDAQ:AMZN) Q1 CY2026: Beats On Revenue,Yahoo! Finance: AMZN News
+AMZN,0.06363636363636364,neutral,2026-04-28,259.7,263.04,1.2861,Google and Meta boost AI spending forecasts,International homepage
+AMZN,0.04999999999999999,neutral,2026-04-28,259.7,263.04,1.2861,"Dow Jones Futures: Google, Amazon, Meta, Microsoft Are Big Earnings Movers After Oil Prices Spike, Fed's Powell Stays",Yahoo! Finance: MSFT News
+AMZN,0.13458152958152958,positive,2026-04-28,259.7,263.04,1.2861,Amazon shares lower as record AI investment offsets cloud acceleration,Yahoo! Finance: AMZN News
+AMZN,0.09670974450386216,neutral,2026-04-28,259.7,263.04,1.2861,Amazon tops Q1 estimates as AWS growth hits fastest pace in 15 quarters,Yahoo! Finance: AMZN News
+AMZN,0.02499742321170892,neutral,2026-04-28,259.7,263.04,1.2861,Tech giants’ results show rosy outlook for AI boom and US stock market,Yahoo! Finance: MSFT News
+AMZN,0.18003246753246752,positive,2026-04-28,259.7,263.04,1.2861,Microsoft vs. Amazon: Comparing Consistent Revenue Growth in Tech Giants,Yahoo! Finance: MSFT News
+AMZN,0.10065359477124182,positive,2026-04-28,259.7,263.04,1.2861,Amazon earnings beat expectations with strong cloud growth,US Top News and Analysis
+AMZN,0.09771315640880858,neutral,2026-04-28,259.7,263.04,1.2861,Bayer Gets Mixed Reception at Supreme Court on Roundup Suits,Yahoo! Finance: BAC News
+AMZN,0.10032693001443001,positive,2026-04-28,259.7,263.04,1.2861,"Amazon tops cloud expectations on strong AI demand, shares dip",Yahoo! Finance: AMZN News
+AMZN,0.026772533022533025,neutral,2026-04-28,259.7,263.04,1.2861,Amazon reports increased 1Q profits and net sales fueled by cloud computing demand,Yahoo! Finance: AMZN News
+AMZN,0.1065969387755102,positive,2026-04-28,259.7,263.04,1.2861,"Saudi Arabia E-commerce Apparel Market Forecast Report 2026-2034, Competitive Analysis of Alibaba, Amazon, ASOS, Best Buy, Ebay, Flipkart, Groupon, JD.com, Shopify, Walmart",Yahoo! Finance: BABA News
+AMZN,0.07212000962000963,neutral,2026-04-28,259.7,263.04,1.2861,Google-parent Alphabet soars as rivals stumble over AI costs,Yahoo! Finance: MSFT News
+AMZN,0.10034722222222224,positive,2026-04-28,259.7,263.04,1.2861,Traders brace for $800 billion in earnings-related stock movement,US Top News and Analysis
+GOOGL,0.07562992562992563,neutral,2026-04-24,344.4,350.34,1.7247,"Amazon, Meta, Microsoft, Salesforce, and Stripe Join the Universal Commerce Protocol Tech Council",Yahoo! Finance: SHOP News
+GOOGL,0.07212000962000963,neutral,2026-04-28,349.78,349.94,0.0457,Google-parent Alphabet soars as rivals stumble over AI costs,Yahoo! Finance: MSFT News
+GOOGL,0.08652219873150103,neutral,2026-04-28,349.78,349.94,0.0457,Ramsey Theory Group CEO Dan Herbatschek Warns Wall Street’s AI Boom Faces an ROI Reckoning as Big Tech Earnings Week Begins,Yahoo! Finance: SHOP News
+GOOGL,0.21900056465273857,positive,2026-04-28,349.78,349.94,0.0457,Google to sell TPU chips to 'select' customers in latest shot at Nvidia,Yahoo! Finance: GOOGL News
+GOOGL,0.06363636363636364,neutral,2026-04-28,349.78,349.94,0.0457,Google told staff it is ‘proud’ of Pentagon AI contract after internal backlash,International homepage
+GOOGL,0.059693877551020395,neutral,2026-04-28,349.78,349.94,0.0457,Alphabet Inc. (GOOG) Q1 Earnings and Revenues Beat Estimates,Yahoo! Finance: GOOGL News
+GOOGL,0.23198529411764707,positive,2026-04-28,349.78,349.94,0.0457,"All eyes on Big Tech: Meta, Alphabet, Microsoft, Amazon report earnings",Yahoo! Finance: AAPL News
+GOOGL,0.125,positive,2026-04-28,349.78,349.94,0.0457,"In A Victory, Gemini Put In Four Million GM Cars",Yahoo! Finance: TSLA News
+GOOGL,-0.55,negative,2026-04-28,349.78,349.94,0.0457,Alphabet Flexes Its Earnings Muscle. The Stock Pops.,Yahoo! Finance: GOOGL News
+GOOGL,0.10032693001443001,positive,2026-04-28,349.78,349.94,0.0457,"Amazon tops cloud expectations on strong AI demand, shares dip",Yahoo! Finance: AMZN News
+GOOGL,0.03115615615615616,neutral,2026-04-28,349.78,349.94,0.0457,Google and Microsoft Just Proved the AI Trade Is Alive—While OpenAI Is Sweating,Yahoo! Finance: MSFT News
+GOOGL,0.22108402426199034,positive,2026-04-28,349.78,349.94,0.0457,1 Reason I'd Buy Buffett's Final Favorite Stock And Never Sell,Yahoo! Finance: AAPL News
+GOOGL,0.0,neutral,2026-04-28,349.78,349.94,0.0457,Goldman Sachs has decisive message on Google stock ahead of earnings,Yahoo! Finance: GS News
+GOOGL,0.06243520923520922,neutral,2026-04-28,349.78,349.94,0.0457,"Microsoft's cloud revenue growth disappoints investors, shares drop 2%",Yahoo! Finance: MSFT News
+GOOGL,0.06962366007008865,neutral,2026-04-28,349.78,349.94,0.0457,OpenAI looms over earnings from tech hyperscalers,Earnings
+GOOGL,0.23333333333333334,positive,2026-04-28,349.78,349.94,0.0457,"Google Stock Climbs On Q1 Earnings As Cloud Revenue, 'Backlog' Booms",Yahoo! Finance: GOOGL News
+GOOGL,0.004901960784313734,neutral,2026-04-28,349.78,349.94,0.0457,"Google gains 25M subscriptions in Q1, driven by YouTube and Google One",Yahoo! Finance: GOOGL News
+GOOGL,0.060937499999999985,neutral,2026-04-28,349.78,349.94,0.0457,Alphabet (GOOGL) Q1 Earnings and Revenues Beat Estimates,Yahoo! Finance: GOOGL News
+GOOGL,-0.5,negative,2026-04-28,349.78,349.94,0.0457,"Alphabet Beats First-Quarter Views Amid Google Cloud, Services Strength",Yahoo! Finance: GOOGL News
+GOOGL,0.012936179981634523,neutral,2026-04-28,349.78,349.94,0.0457,PayPal's new CEO makes Venmo a standalone business unit as potential buyers circle,US Top News and Analysis
+GOOGL,0.08662299010513297,neutral,2026-04-28,349.78,349.94,0.0457,Alphabet's first-quarter profit soars as Google's big AI bets help push stock to new highs,Yahoo! Finance: GOOGL News
+GOOGL,0.06363636363636364,neutral,2026-04-28,349.78,349.94,0.0457,Google and Meta boost AI spending forecasts,International homepage
+GOOGL,0.12739341466614196,positive,2026-04-28,349.78,349.94,0.0457,BMO Capital Raises Alphabet (GOOGL) Price Target by $10 – Here’s Why,Yahoo! Finance: GOOGL News
+GOOGL,-0.09090909090909091,neutral,2026-04-28,349.78,349.94,0.0457,Intel Is Up Another 10%. Why the Struggling Foundry Business Is Lifting Shares.,Yahoo! Finance: NVDA News
+GOOGL,0.15615155312523735,positive,2026-04-28,349.78,349.94,0.0457,Replit CEO Amjad Masad Calls It 'Pretty Dumb' To Chase Computer Science Degrees For Money Alone As AI Reshapes Tech Careers,Yahoo! Finance: GOOGL News
+GOOGL,0.19281060606060602,positive,2026-04-28,349.78,349.94,0.0457,Alphabet tops quarterly revenue and profit estimates on Google Cloud surge,Yahoo! Finance: GOOGL News
+GOOGL,0.02499742321170892,neutral,2026-04-28,349.78,349.94,0.0457,Tech giants’ results show rosy outlook for AI boom and US stock market,Yahoo! Finance: MSFT News
+GOOGL,0.12904409953190443,positive,2026-04-28,349.78,349.94,0.0457,"Alphabet ups 2026 capex to as much as $190 billion, expects to 'significantly increase' in 2027",US Top News and Analysis
+GOOGL,0.1789285714285714,positive,2026-04-28,349.78,349.94,0.0457,"Alphabet gains on strong earnings beat, Cloud growth",Yahoo! Finance: GOOGL News
+GOOGL,0.04999999999999999,neutral,2026-04-28,349.78,349.94,0.0457,"Dow Jones Futures: Google, Amazon, Meta, Microsoft Are Big Earnings Movers After Oil Prices Spike, Fed's Powell Stays",Yahoo! Finance: MSFT News
+GOOGL,0.10034722222222224,positive,2026-04-28,349.78,349.94,0.0457,Traders brace for $800 billion in earnings-related stock movement,US Top News and Analysis
+JPM,0.13777322404371584,positive,2026-04-28,311.45,309.25,-0.7064,JPM Off to a Solid 2026 Start: Should Investors Buy the Stock?,Yahoo! Finance: BAC News
+JPM,0.031628787878787874,neutral,2026-04-28,311.45,309.25,-0.7064,JPMorgan and Susquehanna Both Boost Bloom Energy Price Targets: Is the Data Center Power Play Heating Up?,Yahoo! Finance: JPM News
+JPM,0.15000000000000002,positive,2026-04-28,311.45,309.25,-0.7064,JPMorgan CEO has an urgent message for bond market investors,Yahoo! Finance: JPM News
+JPM,0.15696022727272727,positive,2026-04-28,311.45,309.25,-0.7064,FTAI Upsizes Revolving Credit Facility to Over $2 Billion,Yahoo! Finance: JPM News
+JPM,0.15203515996198924,positive,2026-04-28,311.45,309.25,-0.7064,JPMorgan Chase becomes first global banking partner of Olympic Games,Yahoo! Finance: JPM News
+JPM,0.15386779886779886,positive,2026-04-28,311.45,309.25,-0.7064,JPMorgan Backs Quantum And Blockchain While Valuation Suggests Upside Potential,Yahoo! Finance: GS News
+JPM,0.16280881155881152,positive,2026-04-28,311.45,309.25,-0.7064,JPMorgan Chase CEO Jamie Dimon Just Warned Investors of a Potential Debt Crisis. Here's What Investors Should Do.,Yahoo! Finance: JPM News
+JPM,0.2039887672240613,positive,2026-04-28,311.45,309.25,-0.7064,LinkedIn Names Its 2026 Top 10 U.S. Companies for Career Growth,Yahoo! Finance: JPM News
+JPM,0.09807973557973558,neutral,2026-04-28,311.45,309.25,-0.7064,How The Baker Hughes (BKR) Investment Story Is Shifting With New Price Targets,Yahoo! Finance: JPM News
+JPM,0.10422832980972517,positive,2026-04-28,311.45,309.25,-0.7064,JPMorganChase Announces €3.3 Million to Support Jobseekers with Skills Needed for Europe’s Evolving Energy Sector,Yahoo! Finance: JPM News
+JPM,0.12264756944444442,positive,2026-04-28,311.45,309.25,-0.7064,How JPMorgan’s CIO is reshaping work at the bank with a $19.8 billion annual tech and AI budget,Yahoo! Finance: JPM News
+JPM,-0.06293083900226756,neutral,2026-04-28,311.45,309.25,-0.7064,Jamie Dimon warns of 'some kind of bond crisis' ahead as global debt risks build,Business News
+META,0.10560187918142465,positive,2026-04-24,675.03,678.62,0.5318,Tencent Unveils AI Model in High-Stakes Test for OpenAI Hire,Yahoo! Finance: BABA News
+META,0.07562992562992563,neutral,2026-04-24,675.03,678.62,0.5318,"Amazon, Meta, Microsoft, Salesforce, and Stripe Join the Universal Commerce Protocol Tech Council",Yahoo! Finance: SHOP News
+META,0.05423237476808906,neutral,2026-04-27,678.62,671.34,-1.0728,China Blocks Meta’s $2 Billion Acquisition of AI Firm Manus,Yahoo! Finance: BABA News
+META,0.13424603174603178,positive,2026-04-28,671.34,669.12,-0.3307,Meta's full-year CapEx forecast: The bull vs. bear case,Yahoo! Finance: GOOGL News
+META,0.05318489124044678,neutral,2026-04-28,671.34,669.12,-0.3307,"Meta raises AI capex forecast, stock drops despite Q1 earnings beat",Yahoo! Finance: META News
+META,0.23198529411764707,positive,2026-04-28,671.34,669.12,-0.3307,"All eyes on Big Tech: Meta, Alphabet, Microsoft, Amazon report earnings",Yahoo! Finance: AAPL News
+META,0.17211760461760467,positive,2026-04-28,671.34,669.12,-0.3307,AVGO Rides AI Boom: Explosive Growth in Semiconductor Fuels Outlook,Yahoo! Finance: AMD News
+META,0.06962366007008865,neutral,2026-04-28,671.34,669.12,-0.3307,OpenAI looms over earnings from tech hyperscalers,Earnings
+META,0.03780869923727067,neutral,2026-04-28,671.34,669.12,-0.3307,Amazon (AMZN) Secures Major AWS Deal With Meta,Yahoo! Finance: AMZN News
+META,0.06363636363636364,neutral,2026-04-28,671.34,669.12,-0.3307,Google and Meta boost AI spending forecasts,International homepage
+META,0.16453045060999605,positive,2026-04-28,671.34,669.12,-0.3307,Commerce Announces Integration of PayPal’s Store Sync to Enable AI-Powered Discovery and Checkout for BigCommerce Merchants,Yahoo! Finance: PYPL News
+META,0.029794238683127576,neutral,2026-04-28,671.34,669.12,-0.3307,"Meta beats revenue expectations, boosts capital spending forecast for 2026",Yahoo! Finance: META News
+META,0.02499742321170892,neutral,2026-04-28,671.34,669.12,-0.3307,Tech giants’ results show rosy outlook for AI boom and US stock market,Yahoo! Finance: MSFT News
+META,-0.19166666666666668,negative,2026-04-28,671.34,669.12,-0.3307,Meta Stock Slides Despite Posting Fastest Revenue Growth Since 2021. AI Costs Keep Rising.,Yahoo! Finance: META News
+META,0.10034722222222224,positive,2026-04-28,671.34,669.12,-0.3307,Traders brace for $800 billion in earnings-related stock movement,US Top News and Analysis
+META,0.11750000000000001,positive,2026-04-28,671.34,669.12,-0.3307,Big Tech AI Capex Tops $650 Billion as Q1 Earnings Beats Pressure Bitcoin Risk Trade,Yahoo! Finance: MSFT News
+META,0.06427015250544663,neutral,2026-04-28,671.34,669.12,-0.3307,Meta Platforms (META) Q1 Earnings and Revenues Surpass Estimates,Yahoo! Finance: META News
+META,0.05787996515269243,neutral,2026-04-28,671.34,669.12,-0.3307,2 key risks Meta warned investors about in its Q1 earnings report,Yahoo! Finance: META News
+META,0.03956060606060606,neutral,2026-04-28,671.34,669.12,-0.3307,Meta stock drops on quarterly results as 'internet disruptions' in Iran drag down user numbers,US Top News and Analysis
+META,0.43333333333333335,positive,2026-04-28,671.34,669.12,-0.3307,Meta Q1 2026 earnings: AI capex raised to $145B,Yahoo! Finance: META News
+META,0.011922799422799427,neutral,2026-04-28,671.34,669.12,-0.3307,Meta shares drop as Zuckerberg plans $145bn AI spending spree,Yahoo! Finance: META News
+META,0.04999999999999999,neutral,2026-04-28,671.34,669.12,-0.3307,"Dow Jones Futures: Google, Amazon, Meta, Microsoft Are Big Earnings Movers After Oil Prices Spike, Fed's Powell Stays",Yahoo! Finance: MSFT News
+META,0.13323593073593074,positive,2026-04-28,671.34,669.12,-0.3307,Meta Platforms (META) Pursues Space Solar and Long Duration Storage with Partnerships,Yahoo! Finance: META News
+META,0.06769820850009531,neutral,2026-04-28,671.34,669.12,-0.3307,"Meta's new AI model shows early promise, but investors want to see Zuckerberg's strategy",Earnings
+META,-0.12222222222222223,negative,2026-04-28,671.34,669.12,-0.3307,Meta Stock Falls Sharply Despite Strong Earnings. Blame Higher Capex.,Yahoo! Finance: META News
+META,0.07212000962000963,neutral,2026-04-28,671.34,669.12,-0.3307,Google-parent Alphabet soars as rivals stumble over AI costs,Yahoo! Finance: MSFT News
+META,0.2143939393939394,positive,2026-04-28,671.34,669.12,-0.3307,Meta unveils a surprising new way to pay creators in stablecoins,Yahoo! Finance: META News
+META,0.200150270364556,positive,2026-04-28,671.34,669.12,-0.3307,Meta earnings under the microscope,Yahoo! Finance: MSFT News
+META,0.11518789590823485,positive,2026-04-28,671.34,669.12,-0.3307,Meta beats estimates but soaring AI spending rattles investors,Yahoo! Finance: META News
+META,0.08652219873150103,neutral,2026-04-28,671.34,669.12,-0.3307,Ramsey Theory Group CEO Dan Herbatschek Warns Wall Street’s AI Boom Faces an ROI Reckoning as Big Tech Earnings Week Begins,Yahoo! Finance: SHOP News
+META,0.09904935599380044,neutral,2026-04-28,671.34,669.12,-0.3307,Xi Tests China’s Reach by Blocking Meta Deal That’s Already Done,Yahoo! Finance: BABA News
+META,-0.011607142857142858,neutral,2026-04-28,671.34,669.12,-0.3307,Meta’s Reality Labs lost over $4 billion in first quarter,Earnings
+MSFT,0.07562992562992563,neutral,2026-04-24,424.62,424.82,0.0471,"Amazon, Meta, Microsoft, Salesforce, and Stripe Join the Universal Commerce Protocol Tech Council",Yahoo! Finance: SHOP News
+MSFT,0.2651041666666667,positive,2026-04-24,424.62,424.82,0.0471,Microsoft (MSFT) Must Face a UK lawsuit Over Cloud Computing Licenses,Yahoo! Finance: BABA News
+MSFT,0.06957070707070707,neutral,2026-04-27,424.82,429.25,1.0428,Intel $6.5 Billion Bond Sale Signals Investor Hope in Turnaround,Yahoo! Finance: BAC News
+MSFT,0.02764899828853317,neutral,2026-04-27,424.82,429.25,1.0428,"Trump Calls Kimmel Jokes ‘Despicable,’ Tells ABC to Fire Him",Yahoo! Finance: DIS News
+MSFT,0.09771315640880858,neutral,2026-04-28,429.25,424.46,-1.1159,Bayer Gets Mixed Reception at Supreme Court on Roundup Suits,Yahoo! Finance: BAC News
+MSFT,0.05582788671023967,neutral,2026-04-28,429.25,424.46,-1.1159,Microsoft beats on top and bottom lines with 40% Azure growth,US Top News and Analysis
+MSFT,0.048900462962962965,neutral,2026-04-28,429.25,424.46,-1.1159,"Microsoft Q3 earnings tops Wall Street expectations on strong cloud, AI demand",Yahoo! Finance: MSFT News
+MSFT,0.037351190476190475,neutral,2026-04-28,429.25,424.46,-1.1159,AI Legal Firm Manifest OS Raises Funds at $750 Million Value,Yahoo! Finance: UBER News
+MSFT,0.06828958415322053,neutral,2026-04-28,429.25,424.46,-1.1159,"Trump Discusses Iran Proposal With Aides, White House Says",Yahoo! Finance: GS News
+MSFT,0.06962366007008865,neutral,2026-04-28,429.25,424.46,-1.1159,OpenAI looms over earnings from tech hyperscalers,Earnings
+MSFT,0.03115615615615616,neutral,2026-04-28,429.25,424.46,-1.1159,Google and Microsoft Just Proved the AI Trade Is Alive—While OpenAI Is Sweating,Yahoo! Finance: MSFT News
+MSFT,0.23198529411764707,positive,2026-04-28,429.25,424.46,-1.1159,"All eyes on Big Tech: Meta, Alphabet, Microsoft, Amazon report earnings",Yahoo! Finance: AAPL News
+MSFT,0.18003246753246752,positive,2026-04-28,429.25,424.46,-1.1159,Microsoft vs. Amazon: Comparing Consistent Revenue Growth in Tech Giants,Yahoo! Finance: MSFT News
+MSFT,0.08652219873150103,neutral,2026-04-28,429.25,424.46,-1.1159,Ramsey Theory Group CEO Dan Herbatschek Warns Wall Street’s AI Boom Faces an ROI Reckoning as Big Tech Earnings Week Begins,Yahoo! Finance: SHOP News
+MSFT,0.07167998667998667,neutral,2026-04-28,429.25,424.46,-1.1159,Microsoft (MSFT) Expands AI Push With Microsoft Elevate in Malaysia,Yahoo! Finance: MSFT News
+MSFT,0.11625541125541125,positive,2026-04-28,429.25,424.46,-1.1159,LinkedIn's AI hiring agents on track for $450 million in yearly revenue,Yahoo! Finance: MSFT News
+MSFT,0.1348383838383838,positive,2026-04-28,429.25,424.46,-1.1159,"Microsoft Q3 results top expectations, driven by Intelligent Cloud strength",Yahoo! Finance: MSFT News
+MSFT,0.02499742321170892,neutral,2026-04-28,429.25,424.46,-1.1159,Tech giants’ results show rosy outlook for AI boom and US stock market,Yahoo! Finance: MSFT News
+MSFT,0.06243520923520922,neutral,2026-04-28,429.25,424.46,-1.1159,"Microsoft's cloud revenue growth disappoints investors, shares drop 2%",Yahoo! Finance: MSFT News
+MSFT,0.08451178451178452,neutral,2026-04-28,429.25,424.46,-1.1159,Microsoft earnings beat estimates as AI business jumps 123% YOY,Yahoo! Finance: MSFT News
+MSFT,0.03466462874357613,neutral,2026-04-28,429.25,424.46,-1.1159,"Michael Burry Disagrees With the AI Narrative, Buys Microsoft Stock and 2 Unexpected Names",Yahoo! Finance: PYPL News
+MSFT,0.1711904761904762,positive,2026-04-28,429.25,424.46,-1.1159,Microsoft’s (NASDAQ:MSFT) Q1 CY2026 Sales Beat Estimates,Yahoo! Finance: MSFT News
+MSFT,0.07212000962000963,neutral,2026-04-28,429.25,424.46,-1.1159,Google-parent Alphabet soars as rivals stumble over AI costs,Yahoo! Finance: MSFT News
+MSFT,0.1064923258559622,positive,2026-04-28,429.25,424.46,-1.1159,AI Boom Drives 770% Jump in Asia’s Lesser-Known Chip Supplier,Yahoo! Finance: JPM News
+MSFT,0.07193877551020407,neutral,2026-04-28,429.25,424.46,-1.1159,Microsoft (MSFT) Beats Q3 Earnings and Revenue Estimates,Yahoo! Finance: MSFT News
+MSFT,0.10652173913043479,positive,2026-04-28,429.25,424.46,-1.1159,Should You Follow Michael Burry and Buy Microsoft Stock Before Q3 Earnings?,Yahoo! Finance: AAPL News
+MSFT,0.04999999999999999,neutral,2026-04-28,429.25,424.46,-1.1159,"Dow Jones Futures: Google, Amazon, Meta, Microsoft Are Big Earnings Movers After Oil Prices Spike, Fed's Powell Stays",Yahoo! Finance: MSFT News
+MSFT,0.03333333333333334,neutral,2026-04-28,429.25,424.46,-1.1159,"Microsoft Beats Fiscal Q3 Views On Cloud Computing, AI Strength",Yahoo! Finance: MSFT News
+MSFT,0.16453045060999605,positive,2026-04-28,429.25,424.46,-1.1159,Commerce Announces Integration of PayPal’s Store Sync to Enable AI-Powered Discovery and Checkout for BigCommerce Merchants,Yahoo! Finance: PYPL News
+MSFT,0.2039887672240613,positive,2026-04-28,429.25,424.46,-1.1159,LinkedIn Names Its 2026 Top 10 U.S. Companies for Career Growth,Yahoo! Finance: JPM News
+MSFT,0.06363636363636364,neutral,2026-04-28,429.25,424.46,-1.1159,Google and Meta boost AI spending forecasts,International homepage
+MSFT,0.10034722222222224,positive,2026-04-28,429.25,424.46,-1.1159,Traders brace for $800 billion in earnings-related stock movement,US Top News and Analysis
+MSFT,-0.5,negative,2026-04-28,429.25,424.46,-1.1159,Microsoft Stock Slips Despite Earnings Beat,Yahoo! Finance: MSFT News
+MSFT,0.8,positive,2026-04-28,429.25,424.46,-1.1159,Microsoft in charts: Intelligent cloud revenue rises 30%,Breaking News on Seeking Alpha
+MSFT,0.1263888888888889,positive,2026-04-28,429.25,424.46,-1.1159,"Nvidia Could Generate More Cash Than Apple, Microsoft Combined — BofA Says It's Time To Pay Shareholders",Yahoo! Finance: AAPL News
+MSFT,0.3,positive,2026-04-28,429.25,424.46,-1.1159,Microsoft Q3 2026 earnings beat on cloud and AI growth,Yahoo! Finance: MSFT News
+NFLX,0.1659162109820004,positive,2026-04-24,92.44,91.37,-1.1575,How Netflix Could Perform in a Mild vs. a Severe Recession,Yahoo! Finance: NFLX News
+NFLX,0.04545454545454545,neutral,2026-04-24,92.44,91.37,-1.1575,Netflix's Pivot to Profit: The New Discretionary Blue Chip,Yahoo! Finance: NFLX News
+NFLX,0.07678952991452993,neutral,2026-04-24,92.44,91.37,-1.1575,Netflix Pitches ‘Buyback-and-Chill’ Strategy,Yahoo! Finance: NFLX News
+NFLX,0.12798192034303144,positive,2026-04-24,92.44,91.37,-1.1575,"Could a $25,000 Investment in Netflix Still Offer Generational Wealth?",Yahoo! Finance: NFLX News
+NFLX,0.08704283090646728,neutral,2026-04-24,92.44,91.37,-1.1575,1 Reason I'm Never Selling Netflix Stock,Yahoo! Finance: NFLX News
+NFLX,0.18678090428090424,positive,2026-04-24,92.44,91.37,-1.1575,"A $25 Billion Buyback, Even Bigger Expectations: Netflix Faces Investor Doubts",Yahoo! Finance: NFLX News
+NFLX,0.17451298701298704,positive,2026-04-27,91.37,92.27,0.985,Netflix Weighs Profit Discipline Against Growth In Sports Gaming Experiences,Yahoo! Finance: NFLX News
+NFLX,0.1830823312489979,positive,2026-04-27,91.37,92.27,0.985,Netflix Co-Founder Reed Hastings Is Leaving the Company. What Does This Mean for the Stock?,Yahoo! Finance: NFLX News
+NFLX,0.14775077303648734,positive,2026-04-27,91.37,92.27,0.985,Nvidia vs. Netflix: Wall Street Says This Large Tech Stock Will Make You Richer Over the Next 12 Months,Yahoo! Finance: NFLX News
+NFLX,0.126657196969697,positive,2026-04-27,91.37,92.27,0.985,Netflix Co-Founder Sees Entertainment Resisting AI,Yahoo! Finance: NFLX News
+NFLX,0.1429913893028647,positive,2026-04-27,91.37,92.27,0.985,Jim Cramer Doesn’t Believe It’s Over With Netflix (NFLX),Yahoo! Finance: NFLX News
+NFLX,0.18705765865340332,positive,2026-04-27,91.37,92.27,0.985,A $25 Billion Reason to Buy Netflix Stock in April 2026,Yahoo! Finance: NFLX News
+NFLX,0.18227881051410466,positive,2026-04-27,91.37,92.27,0.985,IAS Launches IAS Total TV Solutions Giving Marketers ‘Linear-like’ Transparency for Connected TV,Yahoo! Finance: DIS News
+NFLX,0.13530844155844154,positive,2026-04-28,92.27,92.12,-0.1626,"Disney CEO Says ESPN Will Remain, Expands $30 Streaming App Strategy",Yahoo! Finance: DIS News
+NFLX,0.17687710437710433,positive,2026-04-28,92.27,92.12,-0.1626,Is Spotify Stock's More Than 40% Decline a Buying Opportunity? Or Is the Stock Still Overvalued?,Yahoo! Finance: SPOT News
+NFLX,0.10747795414462079,positive,2026-04-28,92.27,92.12,-0.1626,"I Want to Buy Netflix Stock, Just Not at This Price",Yahoo! Finance: NFLX News
+NFLX,-0.3,negative,2026-04-28,92.27,92.12,-0.1626,Spotify Stock Falls As Subscriber Target Comes In Light After In-Line Q1,Yahoo! Finance: SPOT News
+NFLX,0.14005376344086018,positive,2026-04-28,92.27,92.12,-0.1626,"Netflix, Inc. (NFLX): One of the Best Big Name Stocks to Buy",Yahoo! Finance: NFLX News
+NFLX,0.2694805194805195,positive,2026-04-28,92.27,92.12,-0.1626,Spotify users give investors a new worry,Yahoo! Finance: SPOT News
+NFLX,0.14314980158730162,positive,2026-04-28,92.27,92.12,-0.1626,Netflix (NASDAQ:NFLX) Posted Healthy Earnings But There Are Some Other Factors To Be Aware Of,Yahoo! Finance: NFLX News
+NFLX,0.14144903581267212,positive,2026-04-28,92.27,92.12,-0.1626,25 Billion Reasons to Buy Netflix Stock Right Now,Yahoo! Finance: NFLX News
+NFLX,0.19841122261576805,positive,2026-04-28,92.27,92.12,-0.1626,Netflix Stock Is Down 32%. Here's Why It's a Screaming Buy.,Yahoo! Finance: NFLX News
+NFLX,0.09263149548863836,neutral,2026-04-28,92.27,92.12,-0.1626,Spotify Technology S.A. (SPOT): Stephen Mandel Likes This Streaming Company,Yahoo! Finance: SPOT News
+NFLX,0.1636309523809524,positive,2026-04-28,92.27,92.12,-0.1626,Is Netflix (NFLX) One of the Best Fundamental Stocks to Invest in According to Billionaires?,Yahoo! Finance: NFLX News
+NFLX,0.12063492063492064,positive,2026-04-28,92.27,92.12,-0.1626,Bernstein Reduces PT on Netflix (NFLX) on Near Term Margin Concerns,Yahoo! Finance: NFLX News
+NFLX,0.21558441558441557,positive,2026-04-28,92.27,92.12,-0.1626,Disney holds onto ESPN as streaming strategy takes focus,Yahoo! Finance: DIS News
+NVDA,0.14775077303648734,positive,2026-04-27,216.61,213.17,-1.5881,Nvidia vs. Netflix: Wall Street Says This Large Tech Stock Will Make You Richer Over the Next 12 Months,Yahoo! Finance: NFLX News
+NVDA,0.13185631828488972,positive,2026-04-28,213.17,209.25,-1.8389,NVIDIA (NVDA) Powers New Pony AI Autonomous Driving System,Yahoo! Finance: NVDA News
+NVDA,0.12791847041847046,positive,2026-04-28,213.17,209.25,-1.8389,"Exclusive-Big Chinese tech firms scramble to secure Huawei AI chips after DeepSeek V4 launch, sources say",Yahoo! Finance: BABA News
+NVDA,0.0989038342609771,neutral,2026-04-28,213.17,209.25,-1.8389,"This Super Semiconductor Stock Is Obliterating Nvidia, AMD, and Broadcom in 2026",Yahoo! Finance: AAPL News
+NVDA,0.17671957671957672,positive,2026-04-28,213.17,209.25,-1.8389,Lattice Wins BIG 2026 AI Excellence Award,Yahoo! Finance: NVDA News
+NVDA,0.13202380952380952,positive,2026-04-28,213.17,209.25,-1.8389,Here’s Why Taiwan Semiconductor Manufacturing (TSM) Is One of the Best Fundamental Stocks to Invest in According to Billionaires,Yahoo! Finance: NVDA News
+NVDA,0.07410417864963319,neutral,2026-04-28,213.17,209.25,-1.8389,"Aidoc Raises $150 Million Series E Led by Goldman Sachs to Scale Clinical AI for Earlier, Safer Diagnoses",Yahoo! Finance: GS News
+NVDA,0.21900056465273857,positive,2026-04-28,213.17,209.25,-1.8389,Google to sell TPU chips to 'select' customers in latest shot at Nvidia,Yahoo! Finance: GOOGL News
+NVDA,0.1493827160493827,positive,2026-04-28,213.17,209.25,-1.8389,Don’t Call It a Laggard: Why NVIDIA Is Up 20% in April,Yahoo! Finance: AMD News
+NVDA,-0.10158730158730159,negative,2026-04-28,213.17,209.25,-1.8389,"Nvidia, AMD Slip. Why Chip Stocks Are on Edge Ahead of Big Tech Earnings.",Yahoo! Finance: AMD News
+NVDA,-0.02067099567099567,neutral,2026-04-28,213.17,209.25,-1.8389,NVIDIA Sets Conference Call for First-Quarter Financial Results,Yahoo! Finance: NVDA News
+NVDA,0.1433862433862434,positive,2026-04-28,213.17,209.25,-1.8389,"Stock Market Today, April 29: Advanced Micro Devices Rises After Analyst Upgrade Points to Data Center GPU Demand Ahead of Earnings",Yahoo! Finance: NVDA News
+NVDA,0.1263888888888889,positive,2026-04-28,213.17,209.25,-1.8389,"Nvidia Could Generate More Cash Than Apple, Microsoft Combined — BofA Says It's Time To Pay Shareholders",Yahoo! Finance: AAPL News
+TSLA,0.10143644234553327,positive,2026-04-28,376.02,372.8,-0.8563,MDB Pilots Tesla Semi in Port Drayage Operations,Yahoo! Finance: TSLA News
+TSLA,0.0,neutral,2026-04-28,376.02,372.8,-0.8563,Tesla Stock Falls. Elon Musk Talks Up ‘Special’ Optimus 3 Robot.,Yahoo! Finance: TSLA News
+TSLA,0.09369721808246396,neutral,2026-04-28,376.02,372.8,-0.8563,Inside SpaceX's IPO: Musk's most ambitious plan yet,Yahoo! Finance: PYPL News
+TSLA,0.1,neutral,2026-04-28,376.02,372.8,-0.8563,Opinion: Tesla Is the Priciest Bargain Stock on the Market,Yahoo! Finance: TSLA News
+TSLA,0.04230456741326307,neutral,2026-04-28,376.02,372.8,-0.8563,Tesla Eyes Model Y L U.S. Launch as Stock Slips,Yahoo! Finance: TSLA News
+TSLA,0.0921953914141414,neutral,2026-04-28,376.02,372.8,-0.8563,This Week In Electric Vehicles - Aftermarket Boom Driven By Aging Fleet And Innovative Services,Yahoo! Finance: TSLA News
+TSLA,0.027083333333333327,neutral,2026-04-28,376.02,372.8,-0.8563,4 Reasons Why SpaceX’s First Trading Day Might Be Hard to Sit Out,Yahoo! Finance: TSLA News
+TSLA,0.17777777777777778,positive,2026-04-28,376.02,372.8,-0.8563,GM unveils plan to take on key Tesla tech,Yahoo! Finance: TSLA News
+TSLA,0.10397615864527632,positive,2026-04-28,376.02,372.8,-0.8563,"Which Matters Most for Tesla Stock: The Cybercab, the Semi, or Megapack 3?",Yahoo! Finance: TSLA News
+TSLA,-0.5,negative,2026-04-28,376.02,372.8,-0.8563,Market Chatter: SpaceX's Starlink Revenue Per User Falls as Customers Quadrupled,Yahoo! Finance: TSLA News
