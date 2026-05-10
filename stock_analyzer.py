@@ -1,3 +1,6 @@
+from logger import get_logger, setup_logging
+log = get_logger(__name__)
+
 import yfinance as yf
 import psycopg2
 from db_pool import get_conn, put_conn  # NEW: use pool
@@ -15,7 +18,7 @@ def fetch_and_store_prices(ticker, days_back=60):
         stock = yf.Ticker(ticker)
         df = stock.history(start=start, end=end)
         if df.empty:
-            print(f"  No data for {ticker}")
+            log.warning(f"No data for {ticker}")
             return 0
         conn = get_conn()
         cur = conn.cursor()
@@ -35,10 +38,10 @@ def fetch_and_store_prices(ticker, days_back=60):
         conn.commit()
         cur.close()
         put_conn(conn)
-        print(f"  {ticker}: {saved} days of prices stored")
+        log.info(f"{ticker}: {saved} days of prices stored")
         return saved
     except Exception as e:
-        print(f"  Error fetching {ticker}: {e}")
+        log.error(f"Error fetching {ticker}: {e}")
         return 0
 
 def parse_date(published_at):
@@ -74,7 +77,7 @@ def build_correlation_table():
         WHERE a.tickers IS NOT NULL AND a.tickers != 'GENERAL' AND a.published_at IS NOT NULL;
     """)
     articles = cur.fetchall()
-    print(f"\nProcessing {len(articles)} articles with tickers...")
+    log.info(f"Processing {len(articles)} articles with tickers...")
     matched = 0
     for article_id, tickers_str, published_at, score, label in articles:
         try:
@@ -108,16 +111,16 @@ def build_correlation_table():
     conn.commit()
     cur.close()
     put_conn(conn)
-    print(f"Matched {matched} article-price pairs")
+    log.info(f"Matched {matched} article-price pairs")
 
 def calculate_correlations():
     conn = get_conn()
     cur = conn.cursor()
-    print("\n" + "="*60)
-    print("SENTIMENT vs NEXT-DAY PRICE CHANGE CORRELATION")
-    print("="*60)
-    print(f"{'Ticker':<8} {'Corr':>8} {'P-value':>10} {'N':>5}  Interpretation")
-    print("-"*60)
+    log.info("="*60)
+    log.info("SENTIMENT vs NEXT-DAY PRICE CHANGE CORRELATION")
+    log.info("="*60)
+    log.info(f"{'Ticker':<8} {'Corr':>8} {'P-value':>10} {'N':>5}  Interpretation")
+    log.info("-"*60)
     cur.execute("SELECT DISTINCT ticker FROM sentiment_correlations;")
     tickers = [row[0] for row in cur.fetchall()]
     results = []
@@ -125,7 +128,7 @@ def calculate_correlations():
         cur.execute("SELECT sentiment_score, next_day_pct_change FROM sentiment_correlations WHERE ticker = %s AND next_day_pct_change IS NOT NULL;", (ticker,))
         rows = cur.fetchall()
         if len(rows) < 3:
-            print(f"{ticker:<8} {'--':>8} {'--':>10} {len(rows):>5}  not enough data")
+            log.info(f"{ticker:<8} {'--':>8} {'--':>10} {len(rows):>5}  not enough data")
             continue
         scores = [r[0] for r in rows]
         changes = [r[1] for r in rows]
@@ -133,12 +136,12 @@ def calculate_correlations():
         sig = "SIGNIFICANT" if pvalue < 0.05 else "marginal" if pvalue < 0.1 else "not significant"
         direction = "positive" if corr > 0 else "negative"
         strength = "strong" if abs(corr) > 0.5 else "moderate" if abs(corr) > 0.3 else "weak"
-        print(f"{ticker:<8} {corr:>8.4f} {pvalue:>10.4f} {len(rows):>5}  {strength} {direction} ({sig})")
+        log.info(f"{ticker:<8} {corr:>8.4f} {pvalue:>10.4f} {len(rows):>5}  {strength} {direction} ({sig})")
         results.append((ticker, corr, pvalue, len(rows)))
-    print("="*60)
-    print("Corr > 0: positive news tends to precede price increases")
-    print("Corr < 0: positive news tends to precede price decreases")
-    print("P-value < 0.05: statistically significant")
+    log.info("="*60)
+    log.info("Corr > 0: positive news tends to precede price increases")
+    log.info("Corr < 0: positive news tends to precede price decreases")
+    log.info("P-value < 0.05: statistically significant")
     cur.close()
     put_conn(conn)
     return results
@@ -159,20 +162,23 @@ def export_for_tableau():
     df.to_csv("correlation_dashboard.csv", index=False)
     cur.close()
     put_conn(conn)
-    print(f"\nExported {len(df)} rows to correlation_dashboard.csv")
+    log.info(f"Exported {len(df)} rows to correlation_dashboard.csv")
 
 def run_full_analysis():
-    print("Step 1: Fetching stock prices from Yahoo Finance...")
+    log.info("Step 1: Fetching stock prices from Yahoo Finance...")
     for ticker in TICKERS:
         fetch_and_store_prices(ticker, days_back=60)
         time.sleep(0.5)
-    print("\nStep 2: Building sentiment-price correlation table...")
+    log.info("Step 2: Building sentiment-price correlation table...")
     build_correlation_table()
-    print("\nStep 3: Calculating correlations...")
+    log.info("Step 3: Calculating correlations...")
     calculate_correlations()
-    print("\nStep 4: Exporting for Tableau...")
+    log.info("Step 4: Exporting for Tableau...")
     export_for_tableau()
-    print("\nDone! Open correlation_dashboard.csv in Tableau.")
+    log.info("Done! Open correlation_dashboard.csv in Tableau.")
 
 if __name__ == "__main__":
+    run_full_analysis()
+if __name__ == "__main__":
+    setup_logging()
     run_full_analysis()

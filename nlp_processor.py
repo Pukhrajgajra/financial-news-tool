@@ -1,13 +1,15 @@
 """
-nlp_processor.py — Runs sentiment analysis and entity extraction on articles.
+nlp_processor.py — Sentiment analysis and entity extraction.
 
-CHANGE FROM BEFORE: get_connection() now uses db_config instead of hardcoded values.
-Everything else is identical.
+CHANGE: replaced all print() with appropriate log levels
 """
 
-from textblob import TextBlob
 import spacy
-from db_pool import get_conn, put_conn  # NEW: use pool
+from textblob import TextBlob
+from db_pool import get_conn, put_conn
+from logger import get_logger
+
+log = get_logger(__name__)  # logger named "nlp_processor"
 
 nlp = spacy.load("en_core_web_sm")
 
@@ -34,7 +36,7 @@ def extract_entities(text):
 
 
 def process_all_articles():
-    conn = get_conn()       # borrow from pool
+    conn = get_conn()
     cur = conn.cursor()
 
     cur.execute("""
@@ -44,7 +46,7 @@ def process_all_articles():
         WHERE s.id IS NULL;
     """)
     articles = cur.fetchall()
-    print(f"Found {len(articles)} unprocessed articles")
+    log.info(f"Found {len(articles)} unprocessed articles")
 
     for article_id, title, summary, full_text in articles:
         text = full_text if full_text and len(full_text) > 100 else (title + " " + (summary or ""))
@@ -62,13 +64,16 @@ def process_all_articles():
                 VALUES (%s, %s, %s);
             """, (article_id, entity, entity_type))
 
-        print(f"  [{label:8}] {title[:50]}")
+        # INFO = shows in console. Use debug for per-article noise if you prefer.
+        log.info(f"[{label:8}] {title[:60]}")
 
     conn.commit()
     cur.close()
-    put_conn(conn)      # return to pool
-    print("\nNLP processing complete!")
+    put_conn(conn)
+    log.info("NLP processing complete!")
 
 
 if __name__ == "__main__":
+    from logger import setup_logging
+    setup_logging()
     process_all_articles()
