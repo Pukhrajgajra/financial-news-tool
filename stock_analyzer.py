@@ -177,8 +177,7 @@ def run_full_analysis():
     export_for_tableau()
     log.info("Done! Open correlation_dashboard.csv in Tableau.")
 
-if __name__ == "__main__":
-    run_full_analysis()
+
 if __name__ == "__main__":
     setup_logging()
     run_full_analysis()

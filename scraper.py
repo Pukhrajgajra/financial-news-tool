@@ -5,7 +5,10 @@ from datetime import datetime
 import hashlib
 import time
 from db_writer import save_article
-from db_pool import initialize_pool, close_pool  # NEW: manage pool lifecycle
+from db_pool import initialize_pool, close_pool
+from logger import setup_logging, get_logger
+
+log = get_logger(__name__)  # logger named "scraper"
 
 RSS_FEEDS = [
     # Yahoo Finance — most reliable, no blocking
@@ -82,9 +85,9 @@ def load_seen_hashes():
             seen_hashes.add(hashlib.md5(url.encode()).hexdigest())
         cur.close()
         put_conn(conn)      # return to pool
-        print(f"Loaded {len(seen_hashes)} existing URLs from DB")
+        log.info(f"Loaded {len(seen_hashes)} existing URLs from DB")
     except Exception as e:
-        print(f"Could not load existing URLs: {e}")
+        log.warning(f"Could not load existing URLs: {e}")
 
 def detect_tickers(text):
     text_lower = text.lower()
@@ -131,20 +134,24 @@ def scrape_rss_feed(url):
                 articles.append(article)
         return articles
     except Exception as e:
-        print(f"Feed error {url}: {e}")
+        log.warning(f"Feed error {url}: {e}")
         return []
 
 def run_pipeline():
-    print(f"\nScraping started at {datetime.now()}")
-    initialize_pool()       # NEW: open pool ONCE before any DB work starts
+    """
+    Core scraping logic.
+    Does NOT call setup_logging() or initialize_pool() —
+    those are handled by whoever calls this (scheduler.py or __main__).
+    """
+    log.info("Scraping pipeline started")
     load_seen_hashes()
     total = 0
     skipped = 0
 
     for feed_url in RSS_FEEDS:
-        print(f"\nFetching: {feed_url}")
+        log.debug(f"Fetching feed: {feed_url}")
         articles = scrape_rss_feed(feed_url)
-        print(f"  Found {len(articles)} entries")
+        log.debug(f"  Found {len(articles)} entries")
 
         for article in articles:
             if is_duplicate(article["url"]):
@@ -156,11 +163,17 @@ def run_pipeline():
             article["tickers"] = detect_tickers(text_for_analysis)
             save_article(article)
             total += 1
-            print(f"  [{article['tickers']:15}] {article['title'][:55]}")
+            log.info(f"[{article['tickers']:15}] {article['title'][:55]}")
             time.sleep(0.3)  # be polite to servers
 
-    print(f"\nDone! New articles saved: {total} | Duplicates skipped: {skipped}")
-    close_pool()            # NEW: cleanly close all connections when done
+    log.info(f"Done! Saved: {total} | Skipped duplicates: {skipped}")
+
 
 if __name__ == "__main__":
-    run_pipeline()
+    # Manual run — set up logging + pool here, tear down when done
+    setup_logging()
+    initialize_pool()
+    try:
+        run_pipeline()
+    finally:
+        close_pool()
