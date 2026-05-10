@@ -1,0 +1,31 @@
+# Install all dependencies with:
+#   pip install -r requirements.txt
+
+# Web scraping
+requests
+feedparser
+beautifulsoup4
+
+# Database
+psycopg2-binary
+
+# NLP
+textblob
+spacy
+# After installing, also run:
+#   python -m spacy download en_core_web_sm
+
+# Stock data
+yfinance
+
+# Scheduling
+apscheduler
+
+# Statistics
+scipy
+
+# Data handling
+pandas
+
+# NEW: reads .env file into environment variables
+python-dotenv

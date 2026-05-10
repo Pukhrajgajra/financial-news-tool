@@ -1,16 +1,14 @@
 import psycopg2
 from textblob import TextBlob
 import spacy
+from db_config import get_db_config  # <-- NEW
 
 nlp = spacy.load("en_core_web_sm")
 
+
 def get_connection():
-    return psycopg2.connect(
-        dbname="financial_news",
-        user="pukhrajgajra",
-        host="localhost",
-        port="5432"
-    )
+    return psycopg2.connect(**get_db_config())  # <-- NEW
+
 
 def analyze_sentiment(text):
     blob = TextBlob(text)
@@ -23,6 +21,7 @@ def analyze_sentiment(text):
         label = "neutral"
     return score, label
 
+
 def extract_entities(text):
     doc = nlp(text[:10000])
     entities = []
@@ -30,6 +29,7 @@ def extract_entities(text):
         if ent.label_ in ["ORG", "PERSON", "GPE", "MONEY"]:
             entities.append((ent.text, ent.label_))
     return list(set(entities))
+
 
 def process_all_articles():
     conn = get_connection()
@@ -66,6 +66,7 @@ def process_all_articles():
     cur.close()
     conn.close()
     print("\nNLP processing complete!")
+
 
 if __name__ == "__main__":
     process_all_articles()

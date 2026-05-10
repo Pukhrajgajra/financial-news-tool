@@ -1,5 +1,6 @@
 import yfinance as yf
 import psycopg2
+from db_config import get_db_config  # NEW: load from .env
 import pandas as pd
 from scipy import stats
 from datetime import datetime, timedelta, date
@@ -8,7 +9,7 @@ import time
 TICKERS = ["AAPL", "TSLA", "NVDA", "MSFT", "GOOGL", "AMZN", "META", "JPM", "NFLX", "AMD"]
 
 def get_connection():
-    return psycopg2.connect(dbname="financial_news", user="pukhrajgajra", host="localhost", port="5432")
+    return psycopg2.connect(**get_db_config())  # NEW
 
 def fetch_and_store_prices(ticker, days_back=60):
     try:

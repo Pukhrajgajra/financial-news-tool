@@ -1,13 +1,13 @@
 import psycopg2
 from datetime import datetime
+from db_config import get_db_config  # <-- NEW: import central config
+
 
 def get_connection():
-    return psycopg2.connect(
-        dbname="financial_news",
-        user="pukhrajgajra",
-        host="localhost",
-        port="5432"
-    )
+    # **get_db_config() unpacks the dict as keyword args
+    # same as writing: psycopg2.connect(dbname=..., user=..., host=..., ...)
+    return psycopg2.connect(**get_db_config())
+
 
 def save_article(article):
     try:
