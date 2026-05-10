@@ -1,13 +1,15 @@
-import psycopg2
+"""
+nlp_processor.py — Runs sentiment analysis and entity extraction on articles.
+
+CHANGE FROM BEFORE: get_connection() now uses db_config instead of hardcoded values.
+Everything else is identical.
+"""
+
 from textblob import TextBlob
 import spacy
-from db_config import get_db_config  # <-- NEW
+from db_pool import get_conn, put_conn  # NEW: use pool
 
 nlp = spacy.load("en_core_web_sm")
-
-
-def get_connection():
-    return psycopg2.connect(**get_db_config())  # <-- NEW
 
 
 def analyze_sentiment(text):
@@ -32,7 +34,7 @@ def extract_entities(text):
 
 
 def process_all_articles():
-    conn = get_connection()
+    conn = get_conn()       # borrow from pool
     cur = conn.cursor()
 
     cur.execute("""
@@ -64,7 +66,7 @@ def process_all_articles():
 
     conn.commit()
     cur.close()
-    conn.close()
+    put_conn(conn)      # return to pool
     print("\nNLP processing complete!")
 
 

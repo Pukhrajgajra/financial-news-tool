@@ -1,15 +1,12 @@
 import yfinance as yf
 import psycopg2
-from db_config import get_db_config  # NEW: load from .env
+from db_pool import get_conn, put_conn  # NEW: use pool
 import pandas as pd
 from scipy import stats
 from datetime import datetime, timedelta, date
 import time
 
 TICKERS = ["AAPL", "TSLA", "NVDA", "MSFT", "GOOGL", "AMZN", "META", "JPM", "NFLX", "AMD"]
-
-def get_connection():
-    return psycopg2.connect(**get_db_config())  # NEW
 
 def fetch_and_store_prices(ticker, days_back=60):
     try:
@@ -20,7 +17,7 @@ def fetch_and_store_prices(ticker, days_back=60):
         if df.empty:
             print(f"  No data for {ticker}")
             return 0
-        conn = get_connection()
+        conn = get_conn()
         cur = conn.cursor()
         saved = 0
         prev_close = None
@@ -37,7 +34,7 @@ def fetch_and_store_prices(ticker, days_back=60):
             saved += 1
         conn.commit()
         cur.close()
-        conn.close()
+        put_conn(conn)
         print(f"  {ticker}: {saved} days of prices stored")
         return saved
     except Exception as e:
@@ -67,7 +64,7 @@ def parse_date(published_at):
         return date.today()
 
 def build_correlation_table():
-    conn = get_connection()
+    conn = get_conn()
     cur = conn.cursor()
     cur.execute("DELETE FROM sentiment_correlations;")
     cur.execute("""
@@ -110,11 +107,11 @@ def build_correlation_table():
             continue
     conn.commit()
     cur.close()
-    conn.close()
+    put_conn(conn)
     print(f"Matched {matched} article-price pairs")
 
 def calculate_correlations():
-    conn = get_connection()
+    conn = get_conn()
     cur = conn.cursor()
     print("\n" + "="*60)
     print("SENTIMENT vs NEXT-DAY PRICE CHANGE CORRELATION")
@@ -143,11 +140,11 @@ def calculate_correlations():
     print("Corr < 0: positive news tends to precede price decreases")
     print("P-value < 0.05: statistically significant")
     cur.close()
-    conn.close()
+    put_conn(conn)
     return results
 
 def export_for_tableau():
-    conn = get_connection()
+    conn = get_conn()
     cur = conn.cursor()
     cur.execute("""
         SELECT sc.ticker, sc.sentiment_score, sc.sentiment_label, sc.price_date,
@@ -161,7 +158,7 @@ def export_for_tableau():
     df = pd.DataFrame(rows, columns=cols)
     df.to_csv("correlation_dashboard.csv", index=False)
     cur.close()
-    conn.close()
+    put_conn(conn)
     print(f"\nExported {len(df)} rows to correlation_dashboard.csv")
 
 def run_full_analysis():

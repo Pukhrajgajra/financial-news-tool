@@ -5,6 +5,7 @@ from datetime import datetime
 import hashlib
 import time
 from db_writer import save_article
+from db_pool import initialize_pool, close_pool  # NEW: manage pool lifecycle
 
 RSS_FEEDS = [
     # Yahoo Finance — most reliable, no blocking
@@ -71,19 +72,16 @@ seen_hashes = set()
 
 def load_seen_hashes():
     """Load already-scraped URLs from DB to avoid re-scraping on restart"""
+    from db_pool import get_conn, put_conn
     try:
-        import psycopg2
-        conn = psycopg2.connect(
-            dbname="financial_news", user="pukhrajgajra",
-            host="localhost", port="5432"
-        )
+        conn = get_conn()   # borrow from pool (already initialized in run_pipeline)
         cur = conn.cursor()
         cur.execute("SELECT url FROM articles;")
         urls = cur.fetchall()
         for (url,) in urls:
             seen_hashes.add(hashlib.md5(url.encode()).hexdigest())
         cur.close()
-        conn.close()
+        put_conn(conn)      # return to pool
         print(f"Loaded {len(seen_hashes)} existing URLs from DB")
     except Exception as e:
         print(f"Could not load existing URLs: {e}")
@@ -138,6 +136,7 @@ def scrape_rss_feed(url):
 
 def run_pipeline():
     print(f"\nScraping started at {datetime.now()}")
+    initialize_pool()       # NEW: open pool ONCE before any DB work starts
     load_seen_hashes()
     total = 0
     skipped = 0
@@ -161,6 +160,7 @@ def run_pipeline():
             time.sleep(0.3)  # be polite to servers
 
     print(f"\nDone! New articles saved: {total} | Duplicates skipped: {skipped}")
+    close_pool()            # NEW: cleanly close all connections when done
 
 if __name__ == "__main__":
     run_pipeline()
