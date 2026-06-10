@@ -1,9 +1,3 @@
-"""
-db_pool.py — Shared connection pool.
-
-CHANGE: replaced print() with log.info() / log.error()
-"""
-
 from psycopg2 import pool
 from db_config import get_db_config
 from logger import get_logger
