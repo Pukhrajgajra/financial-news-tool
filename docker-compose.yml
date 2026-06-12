@@ -1,0 +1,57 @@
+# One command to bring up the whole stack:
+#   docker compose up            -> Postgres + dashboard (http://localhost:8501)
+#   docker compose --profile pipeline up   -> also starts the scrape/NLP scheduler
+#
+# Reads values from a local .env file (see .env.example).
+
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: ${DB_NAME:-financial_news}
+      POSTGRES_USER: ${DB_USER:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?set DB_PASSWORD in your .env}
+    ports:
+      - "5432:5432"          # exposed so you can connect with a local DB tool too
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      # Tables are created on FIRST startup only (when the data volume is empty).
+      - ./schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-postgres} -d ${DB_NAME:-financial_news}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  dashboard:
+    build: .
+    ports:
+      - "8501:8501"
+    environment:
+      DB_HOST: db            # reach Postgres by its compose service name
+      DB_PORT: "5432"
+      DB_NAME: ${DB_NAME:-financial_news}
+      DB_USER: ${DB_USER:-postgres}
+      DB_PASSWORD: ${DB_PASSWORD:?set DB_PASSWORD in your .env}
+    depends_on:
+      db:
+        condition: service_healthy   # wait until Postgres is actually ready
+
+  # Optional background pipeline (scrape -> NLP -> correlation), started only with:
+  #   docker compose --profile pipeline up
+  scheduler:
+    build: .
+    command: ["python", "scheduler.py"]
+    environment:
+      DB_HOST: db
+      DB_PORT: "5432"
+      DB_NAME: ${DB_NAME:-financial_news}
+      DB_USER: ${DB_USER:-postgres}
+      DB_PASSWORD: ${DB_PASSWORD:?set DB_PASSWORD in your .env}
+    depends_on:
+      db:
+        condition: service_healthy
+    profiles: ["pipeline"]
+
+volumes:
+  pgdata:
