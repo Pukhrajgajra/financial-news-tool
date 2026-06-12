@@ -1,31 +1,40 @@
-# Install all dependencies with:
+# Project dependencies. Install with:
 #   pip install -r requirements.txt
+#
+# Versions below are minimum-supported floors (a future clone won't silently
+# pull an incompatible old release). For an EXACT, fully reproducible lock of
+# the versions you're running, generate a lockfile from your working env:
+#   pip freeze > requirements.lock.txt
+# and install with `pip install -r requirements.lock.txt`.
 
 # Web scraping
-requests
-feedparser
-beautifulsoup4
+requests>=2.31
+feedparser>=6.0
+beautifulsoup4>=4.12
 
 # Database
-psycopg2-binary
+psycopg2-binary>=2.9
+alembic>=1.13            # schema migrations
 
 # NLP
-textblob
-spacy
+textblob>=0.18
+spacy>=3.7
 # After installing, also run:
 #   python -m spacy download en_core_web_sm
 
 # Stock data
-yfinance
+yfinance>=0.2.40
 
 # Scheduling
-apscheduler
+apscheduler>=3.10
 
-# Statistics
-scipy
+# Statistics & data handling
+scipy>=1.11
+pandas>=2.0
 
-# Data handling
-pandas
+# Dashboard (Streamlit pulls altair in, but we pin it explicitly)
+streamlit>=1.40
+altair>=5.0
 
-# NEW: reads .env file into environment variables
-python-dotenv
+# Config — reads .env into environment variables
+python-dotenv>=1.0

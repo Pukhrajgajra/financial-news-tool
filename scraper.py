@@ -114,7 +114,7 @@ def get_full_text(url):
         paragraphs = soup.find_all("p")
         text = " ".join(p.get_text(strip=True) for p in paragraphs)
         return text[:5000] if len(text) > 100 else ""
-    except Exception as e:
+    except Exception:
         return ""
 
 def scrape_rss_feed(url):

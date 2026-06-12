@@ -1,0 +1,13 @@
+# Ruff linter configuration.
+# Focuses on real problems (pyflakes F-codes: unused imports, undefined names)
+# while tolerating this project's intentional style.
+
+line-length = 120
+extend-exclude = ["migrations", "__pycache__", ".venv", "venv"]
+
+[lint]
+select = ["E", "F"]
+ignore = [
+    "E402",  # module-level import after code — files set up `log` before importing on purpose
+    "E501",  # long lines (RSS feed URLs, SQL strings) are acceptable here
+]
