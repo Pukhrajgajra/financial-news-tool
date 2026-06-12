@@ -2,7 +2,7 @@
 
 ![CI](https://github.com/Pukhrajgajra/financial-news-tool/actions/workflows/ci.yml/badge.svg)
 
-A data pipeline and dashboard that scrapes financial news, scores its sentiment, and tests whether that sentiment predicts the **next day's stock price movement**. Built for anyone curious about the news-vs-market relationship — and as a study in doing the analysis *honestly*.
+A data pipeline and dashboard that scrapes financial news, scores its sentiment, and tests whether that sentiment predicts the **next day's stock price movement**. Built for anyone curious about the news-vs-market relationship and as a study in doing the analysis *honestly*.
 
 ---
 
@@ -12,12 +12,12 @@ Across the data collected, news sentiment showed **no statistically significant 
 
 > Pooled Pearson **r = −0.18**, **p = 0.37**, **N = 28 ticker-days**.
 
-The interesting part is how I got there. An early version reported a strong correlation (r ≈ 0.67) — which turned out to be wrong for two reasons:
+The interesting part is how I got there. An early version reported a strong correlation (r ≈ 0.67) which turned out to be wrong for two reasons:
 
 1. **Fabricated matches.** When an article had no real "next trading day" in the price table, the code silently fell back to the most recent price move, stamping many unrelated articles with the same number.
 2. **Non-independent observations.** Dozens of articles about the same company on the same day all map to a *single* price move, so counting each article as a data point inflated the sample from ~28 real observations to "208."
 
-After fixing the matching (skip-and-count instead of fabricate) and aggregating to **one point per ticker-day**, the effect disappeared. That null result — and being able to demonstrate it rigorously — is the honest outcome. This is exploratory analysis on a small, time-clustered sample, not a trading signal.
+After fixing the matching (skip-and-count instead of fabricate) and aggregating to **one point per ticker-day**, the effect disappeared. That null result and being able to demonstrate it rigorously is the honest outcome. This is exploratory analysis on a small, time-clustered sample, not a trading signal.
 
 ---
 
@@ -52,7 +52,7 @@ A connection pool, structured logging, and a "dead-letter" table for failed jobs
 
 ## Quickstart (Docker — recommended)
 
-The whole stack — Postgres with the schema pre-loaded, plus the dashboard — comes up with one command.
+The whole stack Postgres with the schema pre-loaded, plus the dashboard - comes up with one command.
 
 ```bash
 cp .env.example .env          # then set DB_PASSWORD to any value
@@ -127,7 +127,7 @@ ruff check .
 pytest
 ```
 
-The suite covers the pure logic — ticker detection, date parsing, and sentiment thresholds — and includes an `xfail` test documenting a known limitation of keyword-based ticker matching (e.g. "meta" matching inside "metabolism"). CI runs the same lint and tests on every push.
+The suite covers the pure logic ticker detection, date parsing, and sentiment thresholds and includes an `xfail` test documenting a known limitation of keyword-based ticker matching (e.g. "meta" matching inside "metabolism"). CI runs the same lint and tests on every push.
 
 ---
 
@@ -141,4 +141,4 @@ The suite covers the pure logic — ticker detection, date parsing, and sentimen
 
 ## License
 
-Released under the MIT License — see `LICENSE` for details.
+Released under the MIT License - see `LICENSE` for details.

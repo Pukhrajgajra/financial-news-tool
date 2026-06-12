@@ -276,7 +276,7 @@ def main() -> None:
             "sentiment_score", "next_day_pct_change"
         ).mark_line(color=NEGATIVE, strokeDash=[5, 4])
         st.altair_chart((dots + trend).properties(height=320), use_container_width=True)
-        st.caption("Exploratory only — sentiment is one of many drivers of price, and articles sharing a "
+        st.caption("Exploratory only sentiment is one of many drivers of price, and articles sharing a "
                    "price date aren't fully independent observations. Read this as a pattern, not a signal to trade on.")
 
     st.divider()
